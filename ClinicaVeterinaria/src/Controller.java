@@ -60,6 +60,12 @@ public class Controller {
 		    saldo += servicos.get(ui[3]).getPreco();
 		    numerodevendas++;
 		}
+		else if(ui[0].equals("showVendas")){
+		    String saida = "";
+		    for(Vendas v : vendas.getAll())
+			    saida += v.toString() + "\n";
+		    return saida;
+		}
 		else if(ui[0].equals("showSaldo"))
 			System.out.println(saldo);
 		else
